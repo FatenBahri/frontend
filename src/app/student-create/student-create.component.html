@@ -1,0 +1,17 @@
+<div class="login-container"> <!-- tu peux réutiliser le style du login pour un look propre -->
+  <h2>Create Student</h2>
+
+  <form (ngSubmit)="createStudent()" #studentForm="ngForm" novalidate>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" [(ngModel)]="username" name="username" required />
+
+    <label for="level">Level</label>
+    <select id="level" [(ngModel)]="level" name="level">
+      <option *ngFor="let lvl of levels" [value]="lvl">{{ lvl }}</option>
+    </select>
+
+    <button type="submit">Save</button>
+    <button type="button" (click)="router.navigate(['/students'])">Cancel</button>
+  </form>
+</div>

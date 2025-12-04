@@ -1,0 +1,94 @@
+
+/* Conteneur du login */
+.login-container {
+    width: 350px;
+    margin: 150px auto;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    background-color: #a4beda; /* Fond clair comme le dashboard */
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #212529;
+}
+
+/* Titre */
+.login-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #212529;
+}
+
+/* Groupe de champs pour marges internes */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #212529;
+}
+
+/* Inputs */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #6c757d;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0,123,255,0.25);
+    outline: none;
+}
+
+/* Messages d'erreur */
+.login-container .error {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* Bouton Login */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.login-container button:hover:enabled {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.login-container button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        margin: 50px auto;
+        padding: 30px 20px;
+    }
+}

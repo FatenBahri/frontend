@@ -1,0 +1,51 @@
+<div class="dashboard">
+  
+  <h2>Students Dashboard</h2>
+
+  <div class="actions">
+
+    <input type="text" placeholder="Search username or ID..." [(ngModel)]="searchTerm">
+
+    <select [(ngModel)]="filterLevel">
+      <option value="">All Levels</option>
+      <option *ngFor="let lvl of levels" [value]="lvl">{{ lvl }}</option>
+    </select>
+    <button (click)="logout()">🚪 Logout</button>
+    <button (click)="loadStudents()">🔍 Search</button>
+
+    <button (click)="createStudent()">➕ Add</button>
+    <button (click)="exportCsv()">⬆️ Export CSV</button>
+    <button (click)="importCsv()">⬇️ Import CSV</button>
+
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Level</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let s of students">
+        <td>{{ s.id }}</td>
+        <td>{{ s.username }}</td>
+        <td>{{ s.level }}</td>
+        <td>
+          <button (click)="editStudent(s)">📝</button>
+          <button (click)="deleteStudent(s.id)">🗑️</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination">
+      <button (click)="previousPage()">Previous</button>
+      <span>Page {{page}}</span>
+      <button (click)="nextPage()">Next</button>
+  </div>
+  
+</div>
