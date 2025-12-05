@@ -1,6 +1,4 @@
-/* ------------------------------------------------ */
-/* STYLE GLOBAL ET CONTENEUR PRINCIPAL */
-/* ------------------------------------------------ */
+
 body {
     font-family: 'Inter', sans-serif; 
     background-color: #303d4b; /* Arrière-plan clair */
@@ -9,7 +7,6 @@ body {
     color: #212529; /* Couleur du texte principal */
 }
 
-/* Conteneur principal du dashboard */
 .dashboard {
     width: 95%;
     max-width: 1300px; 
@@ -30,9 +27,7 @@ body {
     font-weight: 600;
 }
 
-/* ------------------------------------------------ */
-/* SECTION DES ACTIONS ET FILTRES */
-/* ------------------------------------------------ */
+
 .actions {
     display: flex;
     flex-wrap: wrap;
@@ -78,9 +73,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* ------------------------------------------------ */
-/* TABLEAU */
-/* ------------------------------------------------ */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -114,9 +106,7 @@ tbody tr:hover {
     cursor: default;
 }
 
-/* ------------------------------------------------ */
-/* BOUTONS D'ACTION DANS LE TABLEAU */
-/* ------------------------------------------------ */
+
 .table-actions {
     display: flex;
     gap: 8px;
@@ -149,9 +139,7 @@ tbody tr:hover {
     background-color: #bd2130;
 }
 
-/* ------------------------------------------------ */
-/* PAGINATION */
-/* ------------------------------------------------ */
+
 .pagination {
     display: flex;
     justify-content: flex-end;
@@ -187,9 +175,7 @@ tbody tr:hover {
     border-color: #007bff;
 }
 
-/* ------------------------------------------------ */
-/* MEDIA QUERIES */
-/* ------------------------------------------------ */
+
 @media (max-width: 768px) {
     .dashboard {
         margin: 20px auto;

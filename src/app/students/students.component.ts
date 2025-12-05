@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core'; // ⬅️ Ajout de OnInit
+import { Component, OnInit } from '@angular/core'; 
 import { StudentService } from '../services/student.service'; 
-import { AuthLoginService } from '../services/auth-login.service'; // ⬅️ Import du service d'auth
-import { Router } from '@angular/router'; // ⬅️ Import du Router
+import { AuthLoginService } from '../services/auth-login.service'; 
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.css']
 })
-export class StudentsComponent implements OnInit { // ⬅️ Implémentation de OnInit
+export class StudentsComponent implements OnInit { 
   students: any[] = [];
   page = 1;
   searchTerm = "";
@@ -21,7 +21,6 @@ export class StudentsComponent implements OnInit { // ⬅️ Implémentation de 
     "Master"
   ];
 
-  // 1. Injection des dépendances nécessaires
   constructor(private service: StudentService, private authService: AuthLoginService, private router: Router) {} 
 
   ngOnInit() {
@@ -29,7 +28,6 @@ export class StudentsComponent implements OnInit { // ⬅️ Implémentation de 
   }
 
   loadStudents() {
-    // L'appel de 'get' est le même, mais la logique a été corrigée dans le service.
     this.service.get(this.page, this.searchTerm, this.filterLevel)
       .subscribe((data:any) => this.students = data); 
   }
@@ -37,7 +35,6 @@ export class StudentsComponent implements OnInit { // ⬅️ Implémentation de 
   nextPage() { this.page++; this.loadStudents(); }
   previousPage() { if (this.page>1) this.page--; this.loadStudents(); }
 
-  // 2. Méthode de déconnexion
   logout() {
     this.authService.logout();
     this.router.navigate(['/log']); 
@@ -52,7 +49,6 @@ export class StudentsComponent implements OnInit { // ⬅️ Implémentation de 
   }
 
   deleteStudent(id:number) {
-    // Ajout d'une confirmation avant la suppression
     if (confirm(`Êtes-vous sûr de vouloir supprimer l'étudiant avec l'ID ${id} ?`)) {
       this.service.delete(id).subscribe(() => this.loadStudents());
     }

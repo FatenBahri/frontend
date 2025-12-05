@@ -3,7 +3,6 @@
 
   <form (ngSubmit)="login()" #loginForm="ngForm" novalidate>
 
-    <!-- Champ Username -->
     <div class="form-group">
       <label for="username">Username</label>
       <input 
@@ -21,7 +20,6 @@
       </small>
     </div>
 
-    <!-- Champ Password -->
     <div class="form-group">
       <label for="password">Password</label>
       <input 
@@ -39,10 +37,8 @@
       </small>
     </div>
 
-    <!-- Bouton Login -->
     <button type="submit" [disabled]="loginForm.invalid">Login</button>
   </form>
 
-  <!-- Message d'erreur serveur -->
   <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
 </div>

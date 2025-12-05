@@ -18,21 +18,15 @@ export class StudentService {
     return this.http.get<Student[]>(`${this.apiUrl}/all`);
   }
  get(page: number, searchTerm: string, filterLevel: string): Observable<Student[]> {
-    // 1. Démarrez l'URL avec la pagination
     let url = `${this.apiUrl}?page=${page}`; 
     
-    // 2. Ajoutez le terme de recherche SI il est présent
     if (searchTerm) {
-      // ⚠️ ASSUREZ-VOUS QUE LE NOM DU PARAMÈTRE EST CORRECT: 'search'
       url += `&search=${searchTerm}`; 
     }
-    
-    // 3. Ajoutez le filtre de niveau SI il est présent
-    if (filterLevel) {
-      // ⚠️ ASSUREZ-VOUS QUE LE NOM DU PARAMÈTRE EST CORRECT: 'level'
+        if (filterLevel) {
       url += `&level=${filterLevel}`; 
     }
-    console.log("Fetching URL: ", url); // ⬅️ AJOUTEZ CE LOG POUR VÉRIFIER L'URL DANS LA CONSOLE
+    console.log("Fetching URL: ", url); 
     
     return this.http.get<Student[]>(url);
   }

@@ -1,21 +1,15 @@
-/* ---------------------------------- */
-/* 1. Global Form Layout (login-container) */
-/* ---------------------------------- */
+
 .login-container {
-    /* Centrage du conteneur au milieu de la page */
     max-width: 400px;
     margin: 80px auto;
     padding: 30px;
     background-color: #ffffff;
     border-radius: 8px;
-    /* Ombre subtile pour donner de la profondeur */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid #007bff; /* Bande de couleur pour un look distinctif */
+    border-top: 5px solid #007bff; 
 }
 
-/* ---------------------------------- */
-/* 2. Typography and Headings */
-/* ---------------------------------- */
+
 h2 {
     text-align: center;
     color: #333;
@@ -23,9 +17,6 @@ h2 {
     font-size: 1.8em;
 }
 
-/* ---------------------------------- */
-/* 3. Form Elements (Labels, Inputs, Select) */
-/* ---------------------------------- */
 label {
     display: block;
     margin-bottom: 8px;
@@ -40,15 +31,12 @@ select {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Assure que le padding n'augmente pas la largeur totale */
+    box-sizing: border-box; 
     font-size: 1em;
 }
 
-/* ---------------------------------- */
-/* 4. Buttons */
-/* ---------------------------------- */
+
 form button {
-    /* Style de base pour les boutons */
     display: inline-block;
     padding: 10px 15px;
     border: none;
@@ -60,9 +48,8 @@ form button {
     transition: background-color 0.3s ease;
 }
 
-/* Style spécifique pour le bouton 'Save' (primaire) */
 button[type="submit"] {
-    background-color: #28a745; /* Vert pour Sauvegarder */
+    background-color: #28a745; 
     color: white;
 }
 
@@ -70,9 +57,8 @@ button[type="submit"]:hover {
     background-color: #218838;
 }
 
-/* Style spécifique pour le bouton 'Cancel' (secondaire) */
 button[type="button"] {
-    background-color: #6c757d; /* Gris pour Annuler */
+    background-color: #6c757d; 
     color: white;
 }
 
@@ -80,18 +66,15 @@ button[type="button"]:hover {
     background-color: #5a6268;
 }
 
-/* ---------------------------------- */
-/* 5. Validation Feedback (Optionnel mais recommandé) */
-/* ---------------------------------- */
-/* Styles pour les champs invalides après que l'utilisateur ait interagi avec eux */
+
 input.ng-invalid.ng-touched {
-    border-color: #dc3545; /* Rouge pour erreur */
+    border-color: #dc3545; 
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 .error-message {
     color: #dc3545;
     font-size: 0.9em;
-    margin-top: -15px; /* Ajuste la position sous le champ */
+    margin-top: -15px; 
     margin-bottom: 15px;
 }

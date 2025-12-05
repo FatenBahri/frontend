@@ -1,18 +1,16 @@
 
-/* Conteneur du login */
 .login-container {
     width: 350px;
     margin: 150px auto;
     padding: 40px 30px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    background-color: #a4beda; /* Fond clair comme le dashboard */
+    background-color: #a4beda;
     text-align: center;
     font-family: 'Inter', sans-serif;
     color: #212529;
 }
 
-/* Titre */
 .login-container h2 {
     font-size: 1.8rem;
     margin-bottom: 25px;
@@ -20,13 +18,11 @@
     color: #212529;
 }
 
-/* Groupe de champs pour marges internes */
 .form-group {
     margin-bottom: 20px;
     text-align: left;
 }
 
-/* Labels */
 .form-group label {
     display: block;
     margin-bottom: 6px;
@@ -34,7 +30,6 @@
     color: #212529;
 }
 
-/* Inputs */
 .login-container input {
     width: 100%;
     padding: 12px;
@@ -50,14 +45,12 @@
     outline: none;
 }
 
-/* Messages d'erreur */
 .login-container .error {
     color: #dc3545;
     font-size: 0.85rem;
     margin-top: 4px;
 }
 
-/* Bouton Login */
 .login-container button {
     width: 100%;
     padding: 12px;
@@ -84,7 +77,6 @@
     cursor: not-allowed;
 }
 
-/* Responsive pour petits écrans */
 @media (max-width: 768px) {
     .login-container {
         width: 90%;
